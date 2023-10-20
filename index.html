@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mychel Garzon</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="/media/logo.png" />
+      </div>
+      <nav>
+        <button class="mobile">
+          <img src="./media/menu.png" />
+        </button>
+        <ul>
+          <li>
+            <a href="index.html"><img src="media/home.png" /></a>
+          </li>
+          <li>
+            <a href="#projects"><h3>Projects</h3></a>
+          </li>
+          <li>
+            <a href="#skills"><h3>About me</h3></a>
+          </li>
+          <li>
+            <a href="#about"><h3>Skills</h3></a>
+          </li>
+          <li>
+            <a href="./gallery.html"><h3>Gallery</h3></a>
+          </li>
+
+          <li>
+            <a href="https://www.bc.fi/"><h3>More About BCH</h3></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="heroImage">
+      <div class="heroText">
+        <h2>full stack developer</h2>
+        <h1>Mychel Garzon</h1>
+      </div>
+    </div>
+    <main>
+      <div class="grid-container">
+        <div class="project-title"><h2>Projects</h2></div>
+        <div class="project-item" id="project1">
+          <img src="./media/pokemon.jpg" />
+        </div>
+        <div class="project-item" id="project2"></div>
+        <div class="project-item" id="project3"></div>
+
+        <div class="aboutMeTitle"><h2>About me</h2></div>
+        <section id="aboutMe"></section>
+
+        <section id="skillsTitle"></section>
+
+        <div class="skill-item" id="skill1">
+          <img src="./media/css.png" />
+          <img src="./media/react.png" />
+          <img src="./media/js.png" />
+          <img src="./media/html.png" />
+        </div>
+      </div>
+    </main>
+    <button id="backToTop"><img src="./media/up.png" /></button>
+    <footer>
+      <form>
+        <label><h3>Your name</h3> </label>
+        <input type="text" id="name" placeholder="Your name..." />
+        <label><h3>Your email</h3></label>
+        <input type="text" id="email" placeholder="Your email..." />
+        <label><h3>Message to me</h3></label>
+        <textarea id="message" placeholder="Write your message"></textarea>
+        <div class="submit">
+          <input type="submit" value="Submit" />
+        </div>
+        <h3>Copyright</h3>
+      </form>
+      <button class="btn" id="backToTop">Back to top</button>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
