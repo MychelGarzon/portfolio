@@ -121,7 +121,7 @@ img {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 25rem 20rem 15rem;
+  grid-template-rows: 25rem 20rem 20rem 40rem;
   justify-content: center;
   text-align: center;
 }
@@ -184,19 +184,35 @@ img {
   justify-self: center;
 }
 
-.skill-item img {
+.skill-item img,
+.skill-item2 img {
   padding: 2rem;
   width: 10rem;
   height: 10rem;
 }
 
 #skill1 {
-  display: flex;
-  grid-column: 2 / span 2;
+  display: grid;
+  grid-column: 1 / span 2;
   grid-row: 3;
 }
 
+#skill2 {
+  display: grid;
+  grid-column: 3 / span 2;
+  grid-row: 3;
+}
+
+footer {
+  display: flex;
+  grid-column: 1 / span 4;
+  grid-row: 4;
+  background-color: #9dd9d2;
+  width: 100vw;
+}
+
 form {
+  display: block;
   background-color: #9dd9d2;
   color: #392f5a;
   text-align: center;
@@ -227,6 +243,22 @@ textarea {
 .submit #button {
   background-color: #ff8811;
   width: 10rem;
+}
+
+.socialMedia {
+  display: block;
+  grid-column: 3 / span 1;
+  grid-row: 4;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 5rem;
+  background-color: #9dd9d2;
+}
+
+.socialMedia img {
+  width: 5rem;
+  height: 5rem;
 }
 
 .gallery-grid {
