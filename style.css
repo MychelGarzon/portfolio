@@ -20,7 +20,7 @@ h1 {
   font-size: 4rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 h3 {
@@ -70,9 +70,6 @@ li img {
   border-radius: 5px;
   box-shadow: none;
   padding: 0.5rem 1rem;
-  font-family: inherit;
-  font-size: inherit;
-  background-color: orange;
 }
 
 #backToTop {
@@ -121,7 +118,7 @@ img {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 25rem 20rem 20rem 40rem;
+  grid-template-rows: 25rem 20rem 20rem 35rem;
   justify-content: center;
   text-align: center;
 }
@@ -160,28 +157,58 @@ img {
   grid-column: 4;
   grid-row: 1;
 }
+
 .aboutMeTitle {
-  grid-column: 1 / span4;
+  display: grid;
+  grid-column: 1 / span 4;
   grid-row: 2;
   background-color: #9dd9d2;
+  justify-content: center;
+}
+
+.aboutMeTitle img {
+  height: 10rem;
+  width: 10rem;
+}
+
+.photo {
+  display: grid;
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: left;
+  margin: 2rem;
+}
+
+.textAbout {
+  display: inline-block;
+  grid-column: 3;
+  grid-row: 2;
+  text-align: justify;
+}
+
+.skillTittle {
+  display: flex;
+  grid-column: 1;
+  grid-row: 3;
+  justify-self: left;
+  align-items: right;
+  justify-content: center;
+  text-align: center;
+  padding-left: 12rem;
 }
 
 .skill-item {
   width: 5rem;
   height: 5rem;
-  justify-self: center;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
-#skillsTitle {
-  grid-column: 1;
-  grid-row: 3;
-  display: flex;
-  align-items: center;
+.skill-item2 {
+  width: 5rem;
+  height: 5rem;
+  justify-self: right;
+  align-items: right;
+  justify-content: center;
   text-align: center;
-  justify-self: center;
 }
 
 .skill-item img,
@@ -192,15 +219,36 @@ img {
 }
 
 #skill1 {
-  display: grid;
-  grid-column: 1 / span 2;
+  display: flex;
+  grid-column: 1;
   grid-row: 3;
+  justify-self: right;
 }
 
 #skill2 {
-  display: grid;
-  grid-column: 3 / span 2;
+  display: flex;
+  grid-column: 2;
   grid-row: 3;
+  justify-self: center;
+}
+#skill3 {
+  display: flex;
+  grid-column: 3;
+  grid-row: 3;
+  justify-content: left;
+}
+#skill4 {
+  display: flex;
+  grid-column: 4;
+  grid-row: 3;
+  justify-self: left;
+}
+
+#battery1 img,
+#battery2 img {
+  padding: 2rem;
+  width: 10rem;
+  height: 10rem;
 }
 
 footer {
@@ -208,7 +256,7 @@ footer {
   grid-column: 1 / span 4;
   grid-row: 4;
   background-color: #9dd9d2;
-  width: 100vw;
+  width: 99vw;
 }
 
 form {
@@ -268,6 +316,8 @@ textarea {
   grid-template-rows: 15rem 15rem 15rem;
   justify-content: center;
   text-align: center;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 .gallery-grid img {
   height: 100%;
@@ -312,7 +362,10 @@ textarea {
   right: 20px;
 }
 
-@media (max-width: 1640px) {
+@media (max-width: 1600px) {
+  body {
+    background-color: darkcyan;
+  }
   nav ul {
     display: none;
   }
@@ -330,16 +383,15 @@ textarea {
   }
   ul.responsive {
     display: block;
+    background-color: #fff8f0;
     position: absolute;
     left: 0;
     top: 70px;
     width: 100%;
+    z-index: 2;
   }
   ul.responsive li {
     display: block;
     margin: 1rem;
-  }
-  .bg {
-    background-color: orange;
   }
 }

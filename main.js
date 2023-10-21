@@ -1,7 +1,7 @@
-const buttonToTop = document.querySelector('#backToTop');
-const mobileButton = document.querySelector('.mobileView');
-const navigationUl = document.querySelector('nav ul');
-const menu = document.querySelectorAll('nav ul li a');
+const backButton = document.querySelector('#backToTop');
+const mobButton = document.querySelector('.mobileView');
+const nav = document.querySelector('nav ul');
+const menuItems = document.querySelectorAll('nav ul li a');
 const header = document.querySelector('header');
 
 window.onscroll = function () {
@@ -10,17 +10,14 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
   ) {
-    buttonToTop.style.display = 'block';
+    backButton.style.display = 'block';
   } else {
-    buttonToTop.style.display = 'none';
+    backButton.style.display = 'none';
   }
-  if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
-  ) {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     header.classList.add('bg');
   } else {
     header.classList.remove('bg');
@@ -31,17 +28,17 @@ const getToTop = () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 };
-
-const mobileMenu = () => {
-  for (const item of menu) {
-    item.addEventListener('click', mobileMenu);
+const mobMenu = () => {
+  for (const item of menuItems) {
+    item.addEventListener('click', mobMenu);
   }
-  if (navigationUl.classList.contains('responsive')) {
-    navigationUl.classList.remove('responsive');
+
+  if (nav.classList.contains('responsive')) {
+    nav.classList.remove('responsive');
   } else {
-    navigationUl.classList.add('responsive');
+    nav.classList.add('responsive');
   }
 };
 
-buttonToTop.addEventListener('click', getToTop);
-mobileButton.addEventListener('click', mobileMenu);
+backButton.addEventListener('click', getToTop);
+mobButton.addEventListener('click', mobMenu);
