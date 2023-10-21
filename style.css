@@ -4,7 +4,6 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-decoration: none;
 }
 html {
   scroll-behavior: smooth;
@@ -25,12 +24,14 @@ h2 {
 }
 h3 {
   font-size: 1.5rem;
-  text-decoration: none;
 }
 p {
-  font-size: x-large;
+  font-size: large;
   font-weight: bold;
   text-align: justify;
+}
+a {
+  text-decoration: none;
 }
 
 section,
@@ -310,15 +311,17 @@ textarea {
 }
 
 .gallery-grid {
+  position: fixed;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 15rem 15rem 15rem;
+  grid-template-rows: 30rem 20rem 20rem;
   justify-content: center;
   text-align: center;
   min-width: 100vw;
   min-height: 100vh;
 }
+
 .gallery-grid img {
   height: 100%;
   width: 100%;
