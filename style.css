@@ -312,7 +312,7 @@ textarea {
 }
 
 .gallery-grid {
-  position: fixed;
+  position: absolute;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(4, 1fr);
@@ -368,7 +368,7 @@ textarea {
 
 @media (max-width: 1600px) {
   body {
-    background-color: darkcyan;
+    background-color: #ff8811;
     width: min-content;
   }
   nav ul {
@@ -403,5 +403,27 @@ textarea {
   footer {
     display: flex;
     width: 100%;
+  }
+  .gallery-grid {
+    position: absolute;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    min-width: auto;
+    min-height: auto;
+  }
+
+  .image1,
+  .image2,
+  .image3,
+  .image4,
+  .image5,
+  .image6 {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
   }
 }

@@ -3,44 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mychel Garzon</title>
     <link rel="stylesheet" href="style.css" />
-
-    <title>Document</title>
   </head>
-</html>
-<body>
-  <header>
-    <div>
-      <img src="/media/logo.png" />
-    </div>
-    <nav>
-      <li>
-        <a href="index.html"><img src="media/home.png" /></a>
-      </li>
-      <li>
-        <a href="#projects"><h3>Projects</h3></a>
-      </li>
-      <li>
-        <a href="#skills"><h3>About me</h3></a>
-      </li>
-      <li>
-        <a href="#about"><h3>Skills</h3></a>
-      </li>
-      <li>
-        <a href="./gallery.html"><h3>Gallery</h3></a>
-      </li>
+  <body>
+    <header>
+      <div>
+        <img src="./media/logo.png" />
+      </div>
+      <nav>
+        <button class="mobileView">
+          <img src="./media/menu.png" />
+        </button>
+        <ul>
+          <li>
+            <a href="index.html"><img src="./media/home.png" /></a>
+          </li>
+          <li>
+            <a href="#projects"><h3>Projects</h3></a>
+          </li>
+          <li>
+            <a href="#skills"><h3>About me</h3></a>
+          </li>
+          <li>
+            <a href="#about"><h3>Skills</h3></a>
+          </li>
+          <li>
+            <a href="./gallery.html"><h3>Gallery</h3></a>
+          </li>
 
-      <li>
-        <a href="https://www.bc.fi/"><h3>More About BCH</h3></a>
-      </li>
-    </nav>
-  </header>
-  <div class="gallery-grid">
-    <div class="image1"><img src="media/image1.jpg" /></div>
-    <div class="image2"><img src="media/image2.jpg" /></div>
-    <div class="image3"><img src="media/image6.jpg" /></div>
-    <div class="image4"><img src="media/image4.jpg" /></div>
-    <div class="image5"><img src="media/image5.jpg" /></div>
-    <div class="image6"><img src="media/image3.jpg" /></div>
-  </div>
-</body>
+          <li>
+            <a href="https://www.bc.fi/"><h3>More About BCH</h3></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="gallery-grid">
+      <div class="image1"><img src="media/image1.jpg" /></div>
+      <div class="image2"><img src="media/image2.jpg" /></div>
+      <div class="image3"><img src="media/image6.jpg" /></div>
+      <div class="image4"><img src="media/image4.jpg" /></div>
+      <div class="image5"><img src="media/image5.jpg" /></div>
+      <div class="image6"><img src="media/image3.jpg" /></div>
+    </div>
+    <button class="btn" id="backToTop">Back to top</button>
+
+    <script src="main.js"></script>
+  </body>
+</html>
