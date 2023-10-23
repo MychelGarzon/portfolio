@@ -17,7 +17,10 @@ function scrollFunction() {
   } else {
     backButton.style.display = 'none';
   }
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
     header.classList.add('bg');
   } else {
     header.classList.remove('bg');
