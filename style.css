@@ -10,9 +10,11 @@ html {
 }
 
 body {
+  min-width: 100%;
+  max-height: 100vh;
+  overflow-x:hidden;
   display: inline-block;
   background-color: #fff8f0;
-  background-size: 100vw 100vh;
   color: #392f5a;
   font-family: 'Roboto', sans-serif;
 }
@@ -36,21 +38,23 @@ a {
   text-decoration: none;
 }
 
-section,
-footer,
-header,
-main,
-nav {
+footer {
+  margin: 2rem 0; 
   padding: 1rem;
+  min-width: 100%;
+
 }
+
 
 section {
   scroll-margin-top: 50px;
+  margin: 2rem 0; 
+  padding: 1rem; 
 }
 
 header {
+  width: 100%;
   display: flex;
-  top: 0;
   justify-content: space-between;
   align-items: center;
   background-color: #ff8811;
@@ -87,6 +91,35 @@ li img {
   background-color: transparent;
   box-shadow: none;
   border: none;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50%; 
+  cursor: pointer; 
+  
+}
+
+ul.responsive {
+  display: block;
+  background-color: #fff8f0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70px;
+  width: auto; 
+  max-width: 200px; 
+  padding: 1rem;
+  border: 2px solid #ff8811; 
+  border-radius: 5px; 
+  z-index: 1;
+}
+
+ul.responsive li {
+  display: block;
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 button img {
@@ -120,7 +153,6 @@ img {
 .grid-container {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 25rem 20rem 20rem 35rem;
   justify-content: center;
   text-align: center;
@@ -129,7 +161,7 @@ img {
 .project-title {
   grid-column: 1;
   grid-row: 1;
-  display: flex;
+  display: grid;
   align-items: center;
   text-align: center;
   justify-self: center;
@@ -194,7 +226,6 @@ img {
   grid-column: 1;
   grid-row: 3;
   justify-self: left;
-  align-items: right;
   justify-content: center;
   text-align: center;
   padding-left: 12rem;
@@ -208,11 +239,7 @@ img {
 .skill-item2 {
   width: 5rem;
   height: 5rem;
-  justify-self: right;
-  align-items: right;
-  justify-content: center;
-  text-align: center;
-}
+ }
 
 .skill-item img,
 .skill-item2 img {
@@ -222,26 +249,26 @@ img {
 }
 
 #skill1 {
-  display: flex;
+  display: inline-block;
   grid-column: 1;
   grid-row: 3;
   justify-self: right;
 }
 
 #skill2 {
-  display: flex;
+  display: inline-block;
   grid-column: 2;
   grid-row: 3;
   justify-self: center;
 }
 #skill3 {
-  display: flex;
+  display: inline-block;
   grid-column: 3;
   grid-row: 3;
-  justify-content: left;
+  justify-content: center;
 }
 #skill4 {
-  display: flex;
+  display: inline-block;
   grid-column: 4;
   grid-row: 3;
   justify-self: left;
@@ -320,8 +347,8 @@ textarea {
   grid-template-rows: 30rem 20rem 20rem;
   justify-content: center;
   text-align: center;
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 80vw;
+  min-height: 80vh;
 }
 
 .gallery-grid img {
@@ -369,14 +396,23 @@ textarea {
 
 @media (max-width: 1300px) {
   body {
-    width: min-content;
     background-color: #fff8f0;
+  }
+
+
+
+  header{
+    min-width: 100%;
   }
   nav ul {
     display: none;
   }
+
   .mobileView {
-    display: block;
+    display: inline-block; 
+    justify-content: center;
+    align-items: center;
+    
   }
   .skillTittle {
     padding: 1rem;
@@ -401,6 +437,7 @@ textarea {
     width: 100%;
     z-index: 1;
   }
+
   ul.responsive li {
     display: block;
     margin: 1rem;
@@ -428,7 +465,8 @@ textarea {
   }
 
   .gallery-grid img {
-    width: 100%;
+    width: 80%;
     height: auto;
   }
+
 }
